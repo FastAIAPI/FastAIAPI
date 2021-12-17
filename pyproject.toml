@@ -272,7 +272,8 @@ Commitizen = '^2.20.2'
 Pre-Commit = '^2.16.0'
 
 
-# [tool.poetry.scripts]
+[tool.poetry.scripts]
+faa = 'fastaiapi.util.cli:faa'
 
 
 [tool.poetry.extras]

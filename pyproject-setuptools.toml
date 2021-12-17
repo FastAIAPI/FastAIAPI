@@ -268,18 +268,18 @@ doc = [
 
   # Markdown
   'CommonMark >= 0.9.1',
-  'MyST-Parser >= 0.15.2',
+  'MyST-Parser >= 0.16.1',
   'ReCommonMark >= 0.7.1',
 ]
 
 lint = [
   'Bandit >= 1.7.1',
   'Flake8 >= 4.0.1',
-  'MyPy >= 0.910',
+  'MyPy >= 0.920',
   'Prospector >= 1.5.3.1',
   'PyCodeStyle >= 2.8.0',
   'PyDocStyle >= 6.1.1',
-  'PyLama >= 8.3.3',
+  'PyLama >= 8.3.6',
   'PyLint >= 2.12.2',
 
   'Black >= 21.12',
@@ -293,7 +293,8 @@ test = [
 ]
 
 
-# [project.scripts]
+[project.scripts]
+faa = 'fastaiapi.util.cli:faa'
 
 # [project.gui-scripts]
 
