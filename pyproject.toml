@@ -7,10 +7,10 @@ description = 'FastAPI for Artificial Intelligence (AI) Applications'
 license = 'MIT'
 
 authors = [
-  'STEAM for Vietnam Foundation AI & Robotics Educational Initiative <Edu.AI@STEAMforVietNam.org>'
+  'The Vinh LUONG (LƯƠNG Thế Vinh) <TheVinhLuong@gmail.com>'
 ]
 maintainers = [
-  'STEAM for Vietnam Foundation AI & Robotics Educational Initiative <Edu.AI@STEAMforVietNam.org>'
+  'The Vinh LUONG (LƯƠNG Thế Vinh) <TheVinhLuong@gmail.com>'
 ]
 
 readme = 'README.md'
