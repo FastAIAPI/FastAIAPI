@@ -107,16 +107,17 @@ Python = '>= 3.8, < 3.11'
 
 # DATA MANAGEMENT & PROCESSING
 # ============================
+MetaFlow = '^2.4.7'
 NumBa = '^0.55.0rc1'   # let higher dependencies figure
 NumPy = '^1.20.3'   # let higher dependencies figure
 Pandas = '^1.3.5'
 PyArrow = '^6.0.1'
 PySpark = '^3.2.0'
-Ray = {version = '^1.9.0', markers = "python_version < '3.10'"}
+Ray = {version = '^1.9.1', markers = "python_version < '3.10'"}
 SciPy = '^1.7.3'   # let higher dependencies figure
 
-Pillow = '^8.4.0'   # image processing
-# Pillow-SIMD = '^7.0.0'   # complex to install
+Pillow = '^9.0.0'   # image processing
+# Pillow-SIMD = '^9.0.0'   # complex to install
 SciKit-Image = '^0.19.1'
 
 Kedro = {version = '^0.17.6', markers = "python_version < '3.9'"}
@@ -138,17 +139,17 @@ TensorFlow-Hub = '^0.12.0'
 
 # Torch & related
 Torch = {version = '^1.10.1', markers = "python_version < '3.10'"}
-Torch-Model-Archiver = '^0.5.1'
-TorchServe = '^0.5.1'
+Torch-Model-Archiver = '^0.5.2'
+TorchServe = '^0.5.2'
 
 TorchAudio = {version = '^0.10.1', markers = "python_version < '3.10'"}
 TorchText = {version = '^0.11.1', markers = "python_version < '3.10'"}
 TorchVision = {version = '^0.11.2', markers = "python_version < '3.10'"}
 
 # Hugging Face & related
-DataSets = '^1.16.1'
+DataSets = '^1.17.0'
 HuggingFace-Hub = '^0.2.1'
-Transformers = {version = '^4.14.1', markers = "python_version < '3.10'"}
+Transformers = {version = '^4.15.0', markers = "python_version < '3.10'"}
 
 SentencePiece = '^0.1.96'   # Translation
 TIMM = {version = '^0.4.12', markers = "python_version < '3.10'"}   # for Object Detection
@@ -172,6 +173,9 @@ Tabulate = '^0.8.9'
 LIME = '^0.2.0.1'
 SHAP = {version = '^0.40.0', markers = "python_version < '3.10'"}
 
+# ML Model Management
+MLFLow = '^1.22.0'
+
 
 # NON-ML MODELING
 # ===============
@@ -191,10 +195,10 @@ S3FS = '^2021.11.1'
 # =================
 
 # FastAPI
-FastAPI = '^0.70.1'
+FastAPI = '^0.71.0'
 
 # SQLModel
-SQLModel = '^0.0.5'
+SQLModel = '^0.0.6'
 
 # GraphQL
 # Ariadne = '^0.13.0'   # ariadne 0.13.0 depends on graphql-core>=3.1.0
@@ -219,8 +223,8 @@ HAL-Codec = '^1.0.2'
 JSONHyperSchema-Codec = '^1.0.3'
 OpenAPI-Codec = '^1.3.2'
 
-JSONSchema = '^4.3.1'
-Pydantic = '^1.8.2'
+JSONSchema = '^4.3.3'
+Pydantic = '^1.9.0'
 
 HTTPie = '^2.6.0'
 
@@ -229,8 +233,8 @@ MariaDB-DynCol = '^3.4.0'
 Django-MySQL = '^4.3.0'
 MySQLClient = '^2.1.0'
 MySQL-Connector-Python = '^8.0.27'
-PsycoPG2-binary = '^2.9.2'
-SQLAlchemy = '^1.4.28'
+PsycoPG2-binary = '^2.9.3'
+SQLAlchemy = '^1.4.29'
 
 # ASGI Web Servers & related
 ASGIRef = '^3.4.1'   # let higher dependencies figure
@@ -238,9 +242,9 @@ Channels = '^3.0.4'
 Daphne = '^3.0.2'
 GUnicorn = '^20.1.0'
 # H11 = '^0.12.0'   # conflicts with other deps
-Hypercorn = '^0.13.1'
+Hypercorn = '^0.13.2'
 Quart = '^0.16.2'
-Starlette = '^0.16'   # let higher dependencies figure
+Starlette = '^0.17'   # let higher dependencies figure
 Uvicorn = '^0.16.0'
 
 
@@ -252,9 +256,9 @@ Colored = '^1.4.3'
 
 # MISC / OTHER
 # ============
-GitPython = '^3.1.24'
+GitPython = '^3.1.25'
 'Ruamel.YAML' = '^0.17.17'
-PSUtil = '^5.8.0'
+PSUtil = '^5.9.0'
 Python-DateUtil = '^2.8.1'   # let higher dependencies figure
 Python-DotEnv = '^0.19.2'
 PyTZ = '^2021.3'
@@ -264,11 +268,17 @@ Tqdm = '^4.62.3'
 
 # CLOUD
 # =====
-# AWSEBCLI = '^3.20.2'
+
+# AWS
+AWSCLI = '~1.21'   # let higher dependencies figure
+Boto3 = '~1.19'   # let higher dependencies figure
+
+# AWSEBCLI = '~3.2'   # too outdated
+# AWSWrangler = '^0.0.8'   # too outdated
 
 
 [tool.poetry.dev-dependencies]
-Commitizen = '^2.20.2'
+Commitizen = '^2.20.3'
 Pre-Commit = '^2.16.0'
 
 
@@ -279,7 +289,7 @@ faa = 'fastaiapi.util.cli:faa'
 [tool.poetry.extras]
 doc = [
   # Sphinx & related
-  'Sphinx >= 4.3.1',
+  'Sphinx >= 4.3.2',
   'Sphinx-AutoBuild >= 2021.3.14',
   'SphinxContrib-JSMath >= 1.0.1',
 
@@ -292,7 +302,7 @@ doc = [
 lint = [
   'Bandit >= 1.7.1',
   'Flake8 >= 4.0.1',
-  'MyPy >= 0.920',
+  'MyPy >= 0.931',
   'Prospector >= 1.5.3.1',
   'PyCodeStyle >= 2.8.0',
   'PyDocStyle >= 6.1.1',
@@ -309,6 +319,16 @@ test = [
   'UnitTest2 >= 1.1.0',
 ]
 
+viz = [
+  'Altair >= 4.2.0',
+  'Bokeh >= 2.4.2',
+  'Dash >= 2.0.0',
+  'Dash-DAQ >= 0.5.0',
+  'PlotLy >= 5.5.0',
+  'PlotNine >= 0.8.0',
+  'Seaborn >= 0.11.2',
+]
+
 
 [tool.poetry.plugins]
 
@@ -322,11 +342,5 @@ GitHub = 'https://GitHub.com/FastAIAPI/FastAIAPI'
 [build-system]
 requires = [
   'Poetry-Core >= 1.0.7',
-
-  # *** TEMP FIX for SetUpTools-related bug ***
-  # github.com/pypa/pip/issues/10743#issuecomment-998321115
-  # github.com/python-poetry/poetry/issues/3153#issuecomment-727196619
-  # github.com/python-poetry/poetry/issues/4915#issuecomment-999449889
-  'SetUpTools >= 60.1.0',
 ]
 build-backend = 'poetry.core.masonry.api'
