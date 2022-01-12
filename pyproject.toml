@@ -148,7 +148,7 @@ TorchVision = {version = '^0.11.2', markers = "python_version < '3.10'"}
 
 # Hugging Face & related
 DataSets = '^1.17.0'
-HuggingFace-Hub = '^0.2.1'
+HuggingFace-Hub = '^0.4.0'
 Transformers = {version = '^4.15.0', markers = "python_version < '3.10'"}
 
 SentencePiece = '^0.1.96'   # Translation
